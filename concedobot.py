@@ -277,9 +277,9 @@ async def on_message(message):
 
             finally:
                 busy.release()
-        elif not is_reply_someone_else:
-            print("History Auto Wiped")
-            currchannel.chat_history = []
+    elif not is_reply_someone_else:
+        print("History Auto Wiped")
+        currchannel.chat_history = []
 
 try:
     client.run(os.getenv("BOT_TOKEN"))
